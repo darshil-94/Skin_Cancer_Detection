@@ -26,8 +26,8 @@ model = tf.keras.models.load_model("models/My_model.h5")
 CLASS_NAMES = ["Benign", "Malignant"]  # Example classes
 
 # Set up static files and templates
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
-templates = Jinja2Templates(directory="app/templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def serve_homepage(request: Request):
