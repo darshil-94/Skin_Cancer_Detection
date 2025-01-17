@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 # Load the Keras model
-model = tf.keras.models.load_model("/home/petpooja-920/Projects/Skin_Cancer_Detection-master/models/My_model.h5")
+model = tf.keras.models.load_model("models/My_model.h5")
 CLASS_NAMES = ["Benign", "Malignant"]  # Example classes
 
 # Set up static files and templates
